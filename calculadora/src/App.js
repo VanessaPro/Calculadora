@@ -6,6 +6,7 @@ function App() {
   const [resultado, setResultado]=useState(0)
   const [acumulador, setAcumulador]=useState(0)
   const [operado, setOperado]=useState(false)
+  const [cont, setCont] = useState(0)
 
   // Componentes
   const Tela=(valor,res)=>{
@@ -25,26 +26,26 @@ function App() {
    }
 
    // Funções
-
    const addDigitoTela=(d)=>{
-     if((d=='+' || d=='-' || d=='*' || d=='/') && operado){
-       console.log("+-*/")
-       setOperado(false)
-       setValorTela(resultado+d)
-       return
-
-     }
-
-    if(operado){
-      setValorTela(d)
+    if((d=='+' || d=='-' || d=='*' || d=='/') && operado){
+      console.log("+-*/")
       setOperado(false)
+      setValorTela(resultado+d)
+      setCont(1)
       return
+
     }
 
-    const valorDigitadoTela=valorTela+d
-    setValorTela(valorDigitadoTela)   
-  }
+   if(operado){
+     setValorTela(d)
+     setOperado(false)
+     return
+   }
 
+   const valorDigitadoTela=valorTela+d
+   setValorTela(valorDigitadoTela)   
+ }
+    
   const limparMemoria=()=>{
     setOperado(false)
     setValorTela('')
