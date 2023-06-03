@@ -73,7 +73,10 @@ function App() {
     } 
   }
 
+  
+
   //Estilos
+
 
   const cssContainer={
     display:'flex',
@@ -81,12 +84,15 @@ function App() {
     alignItems:'center',
     flexDirection:'column',
     width:300,
-    border:'1px solid #000'
+    border:'1px solid #000',
+    margin: '0 auto',
+    backgroundColor:'#1E90FF',
   }
 
   const cssBotoes={
     flexDirection:'row',
     flexWrap:'wrap'
+    
 
   }
 
@@ -96,9 +102,11 @@ function App() {
     paddingRight:20,
     justifyContent:"center",
     alignItems:'flex-start',
-    backgroundColor:'#444',
+    backgroundColor:'#20B2AA',
     flexDirection:'colum',
-    width:260
+    width:260,
+    cursor:'pointer'
+   
   }
 
 
@@ -106,6 +114,7 @@ function App() {
     fontSize:25,
     color:'#fff',
     height:20
+    
   }
 
   const cssTelaRes={
@@ -123,13 +132,14 @@ function App() {
     color:'#fff',
     borderColor:'#000',
     textAlign:'center',
-    outline:'none' 
+    outline:'none',
+    cursor:'pointer'
   }
 
 
   return (
     <div style={cssContainer}>
-      <h3>Calculadora Matemática simples</h3>
+      <h3>CALCULADORA</h3>
       {Tela(valorTela,resultado)}
       <div style={cssBotoes }>
         {Btn('AC',limparMemoria)}
