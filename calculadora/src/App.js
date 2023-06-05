@@ -6,7 +6,7 @@ function App() {
   const [resultado, setResultado]=useState(0)
   const [acumulador, setAcumulador]=useState(0)
   const [operado, setOperado]=useState(false)
-  const [cont, setCont] = useState(0)
+  
 
   // Componentes
   const Tela=(valor,res)=>{
@@ -31,7 +31,6 @@ function App() {
       console.log("+-*/")
       setOperado(false)
       setValorTela(resultado+d)
-      setCont(1)
       return
 
     }
@@ -62,6 +61,7 @@ function App() {
       vtela=vtela.substring(0,(vtela.lenght-1))
       setValorTela(vtela)
       setOperado(false)
+     
       return
     }
     try{
